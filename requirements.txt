@@ -1,0 +1,18 @@
+# Core dependencies
+torch>=2.0.0
+numpy>=1.24.0
+gymnasium>=0.29.0
+
+# Configuration and logging
+pyyaml>=6.0
+tensorboard>=2.13.0
+matplotlib>=3.7.0
+tqdm>=4.65.0
+
+# Testing
+pytest>=7.3.0
+
+# Hardware (uncomment based on your setup)
+# pyserial>=3.5      # For serial communication
+# smbus2>=0.4.2      # For I2C
+# scipy>=1.10.0      # For signal processing

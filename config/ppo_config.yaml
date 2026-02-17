@@ -1,0 +1,13 @@
+# PPO Hyperparameters
+# Resource: https://arxiv.org/abs/1707.06347
+
+learning_rate: 3.0e-4
+gamma: 0.99              # Discount factor
+gae_lambda: 0.95         # GAE parameter
+clip_epsilon: 0.2        # PPO clipping
+value_loss_coef: 0.5
+entropy_coef: 0.01       # Exploration bonus
+max_grad_norm: 0.5
+n_epochs: 10             # Optimization epochs per batch
+batch_size: 64
+n_steps: 2048            # Steps before update

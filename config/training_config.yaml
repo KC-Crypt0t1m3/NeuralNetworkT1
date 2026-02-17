@@ -1,0 +1,23 @@
+# Training Configuration
+
+total_timesteps: 1000000
+n_envs: 1                # Parallel environments
+eval_freq: 10000
+save_freq: 50000
+log_interval: 100
+device: "cuda"           # cuda or cpu
+
+# Model architecture
+model:
+  # Observation space design:
+  # - 12 distance sensor readings
+  # - 12 servo positions (proprioception)
+  # - 6 IMU values (vel_x, vel_y, vel_z, roll, pitch, yaw)
+  # Total: 30 inputs
+  
+  observation_dim: 30     # 12 sensors + 12 servos + 6 IMU
+  action_dim: 12          # 12 servo commands
+  
+  sensor_encoder_dims: [64, 32]   # Encode sensor data
+  actor_hidden_dims: [128, 128]
+  critic_hidden_dims: [128, 128]

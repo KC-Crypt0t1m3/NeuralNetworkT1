@@ -1,0 +1,40 @@
+# Spider-Bot Hardware Configuration
+# 4 legs, 3 servos per leg = 12 total servos
+# 12 distance sensors (one per servo)
+
+robot:
+  n_legs: 4
+  servos_per_leg: 3       # 3 servos per leg
+  total_servos: 12        # 4 legs * 3 servos
+  
+  # Action space: 12 motor commands (one per servo)
+  action_dim: 12
+  
+  # Servo limits (adjust based on your hardware)
+  servo_min_angle: 0      # degrees
+  servo_max_angle: 180    # degrees
+  
+distance_sensors:
+  # 12 individual distance sensors (LiDAR or ultrasonic)
+  n_sensors: 12           # One per servo
+  min_range: 0.02         # meters (2cm)
+  max_range: 4.0          # meters (adjust based on sensor type)
+  sensor_type: "lidar"    # or "ultrasonic", "ir"
+  
+  # If these are actual scanning LiDARs per servo (uncomment if true):
+  # points_per_lidar: 360
+  # Otherwise, assume single distance reading per sensor
+
+communication:
+  interface: "serial"     # serial, i2c, or ros
+  serial_port: "/dev/ttyUSB0"
+  baud_rate: 115200
+  
+sensors:
+  # IMU for body orientation
+  imu:
+    enabled: true         # Recommended for stability
+  
+  # Servo feedback
+  servo_feedback:
+    enabled: true         # Read current servo positions

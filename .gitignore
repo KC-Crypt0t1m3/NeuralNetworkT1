@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.pth
+*.pt
+!checkpoints/.gitkeep
+logs/
+*.log
+data/
+.vscode/
+.idea/
+venv/
+env/
