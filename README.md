@@ -1,6 +1,6 @@
 # Spider-Bot PPO Controller
 
-PPO-based RL controller for a 4-legged autonomous spider-bot with 12 servos and 12 distance sensors, optimized for Jetson Orin Nano.
+PPO-based RL controller for a 4-legged autonomous spider-bot with 12 servos and 4 distance sensors, optimized for Jetson Orin Nano.
 
 ## Hardware
 - **4 legs** with 3 servos each (12 servos total)
